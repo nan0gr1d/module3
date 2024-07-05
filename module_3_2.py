@@ -1,21 +1,20 @@
 #module_3_2
-"""
-Задача "Рассылка писем"
-"""
+# Задача "Рассылка писем"
+
 default_sender = 'university.help@gmail.com'
 
-def chk_addr(addr):
-    if "@" not in addr:
+def check_address(address):
+    if "@" not in address:
         return False
-    last_dot = addr.rindex('.')
-    domain = addr[last_dot +1:].lower()
+    last_dot = address.rindex('.')
+    domain = address[last_dot +1:].lower()
     if domain not in ["com", "ru", "net"]:
         return False
     return True
 
 def send_email(message, recipient, *, sender=default_sender):
 
-    if not chk_addr(sender) or (not chk_addr(sender)):
+    if not check_address(sender) or (not check_address(sender)):
         print(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}.")
         return
 
