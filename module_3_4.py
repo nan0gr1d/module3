@@ -22,5 +22,7 @@ result3 = single_root_words('foo', 'buz', 'Foo', 'bar', 'oFo', 'FO', 'oO')
 print(result1)
 print(result2)
 print(result3)
+result4 = single_root_words('Андрей', 'АнДрПй', 'Дрей', 'Андроид', 'Чернов', 'аНДР', 'кириллица')
+print(result4)
 
 #eof-module_3_4
